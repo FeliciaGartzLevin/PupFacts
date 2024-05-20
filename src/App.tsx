@@ -1,20 +1,14 @@
-import { useContext } from "react"
-import { ThemeContext } from "./context/theme-context-provider"
+import { useThemeContext } from './hooks/useThemeContext';
 
 export const App = () => {
-  if (!ThemeContext) {
-    return (
-      <div>
-        Can't find context
-      </div>
-    )
-  } else {
-    const { theme } = useContext(ThemeContext)
-    return (
-      <>
-        <p>PupFacts</p>
-        <p>{theme}</p>
-      </>
-    )
-  }
-}
+  const themeContext = useThemeContext();
+
+  const { theme } = themeContext;
+
+  return (
+    <>
+      <p>PupFacts</p>
+      <p>{theme}</p>
+    </>
+  );
+};
