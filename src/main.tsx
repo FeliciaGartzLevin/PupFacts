@@ -1,12 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { App } from './App.tsx'
-import { ThemeContextProvider } from './context/theme-context-provider.tsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { App } from './App.tsx';
+import { ThemeContextProvider } from './context/theme-context-provider.tsx';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <ThemeContextProvider>
-      <App />
-    </ThemeContextProvider>
-  </React.StrictMode>,
-)
+	<React.StrictMode>
+		<BrowserRouter>
+			<ThemeContextProvider>
+				<App />
+			</ThemeContextProvider>
+		</BrowserRouter>
+	</React.StrictMode>,
+);
