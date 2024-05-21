@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getRandomPupFact } from '../services/fetchPupFact';
+import { getRandomPupFact } from '../services/fetch-pup-fact';
 
 export const useGetRandomPupFact = () => {
 	const [pupFact, setPupFact] = useState<string[] | null>(null);
